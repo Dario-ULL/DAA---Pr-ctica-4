@@ -27,6 +27,11 @@ class Quicksort : public Divide_Y_Venceras {
 
 
 
+/**
+ * Resuelve el caso menor del algoritmo Quicksort
+ * @param {std::vector<int>} entrada  -  Cadena de numeros
+ * @return {std::vector<int>}
+*/
 std::vector<int> 
 Quicksort::resolverPequeño (std::vector<int> entrada) const {
 	return entrada;
@@ -34,6 +39,11 @@ Quicksort::resolverPequeño (std::vector<int> entrada) const {
 
 
 
+/**
+ * Comprueba si la cadena es de tamaño minimo del algoritmo Quicksort
+ * @param {std::vector<int>} entrada  -  Cadena de numeros
+ * @return {bool}
+*/
 bool 
 Quicksort::tamaño (std::vector<int> entrada) const {
  	return entrada.size() <= 1;	
@@ -41,6 +51,12 @@ Quicksort::tamaño (std::vector<int> entrada) const {
 
 
 
+/**
+ * Divide la cadena en dos partes para algoritmo Quicksort
+ * en el que se obserba si cada elemento es menor o mayor a un pivite
+ * @param {std::vector<int>} entrada  -  Cadena de numeros
+ * @return {std::vector<std::vector<int>>}
+*/
 std::vector<std::vector<int>> 
 Quicksort::dividir (std::vector<int> entrada) const {
 	std::vector<std::vector<int>> particion;
@@ -59,6 +75,12 @@ Quicksort::dividir (std::vector<int> entrada) const {
 
 
 
+/**
+ * Combina dos cadenas de entrada del algoritmo Quicksort
+ * @param {std::vector<int>} solucion1  -  Cadena de numeros
+ * @param {std::vector<int>} solucion2  -  Cadena de numeros
+ * @return {std::vector<int>}
+*/
 std::vector<int> 
 Quicksort::combinar (std::vector<int> solucion1, std::vector<int> solucion2) const {
   std::vector<int> combinacion = solucion1;
@@ -68,20 +90,30 @@ Quicksort::combinar (std::vector<int> solucion1, std::vector<int> solucion2) con
 
 
 
+/**
+ * Da el numero de subproblemas creados del algoritmo Quicksort
+ * @return {std::string}
+*/
 std::string 
 Quicksort::numeroSubProblemas () const {
 	return "T(k)";
 }
 
 
-
+/**
+ * Da el factor de reduccion de un subproblema del algoritmo Quicksort
+ * @return {std::string}
+*/
 std::string  
 Quicksort::factorDeReduccion () const {
 	return "n - k - 1";
 }
 
 
-
+/**
+ * Da el el tiempo de combinacion del algoritmo Quicksort
+ * @return {std::string}
+*/
 std::string 
 Quicksort::tiempoDeCombinacion () const {
 	return "n";

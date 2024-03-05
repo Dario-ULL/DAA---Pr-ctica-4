@@ -27,6 +27,11 @@ class Mergesort : public Divide_Y_Venceras {
 
 
 
+/**
+ * Resuelve el caso menor del algoritmo Mergesort
+ * @param {std::vector<int>} entrada  -  Cadena de numeros
+ * @return {std::vector<int>}
+*/
 std::vector<int> 
 Mergesort::resolverPequeño (std::vector<int> entrada) const {
 	return entrada;
@@ -34,6 +39,11 @@ Mergesort::resolverPequeño (std::vector<int> entrada) const {
 
 
 
+/**
+ * Comprueba si la cadena es de tamaño minimo del algoritmo Mergesort
+ * @param {std::vector<int>} entrada  -  Cadena de numeros
+ * @return {bool}
+*/
 bool 
 Mergesort::tamaño (std::vector<int> entrada) const {
  	return entrada.size() <= 1;	
@@ -41,6 +51,11 @@ Mergesort::tamaño (std::vector<int> entrada) const {
 
 
 
+/**
+ * Divide la cadena en dos partes para algoritmo Mergesort
+ * @param {std::vector<int>} entrada  -  Cadena de numeros
+ * @return {std::vector<std::vector<int>>}
+*/
 std::vector<std::vector<int>> 
 Mergesort::dividir (std::vector<int> entrada) const {
 	std::vector<std::vector<int>> particion(2);
@@ -56,6 +71,12 @@ Mergesort::dividir (std::vector<int> entrada) const {
 
 
 
+/**
+ * Combina dos cadenas de entrada del algoritmo Mergesort
+ * @param {std::vector<int>} solucion1  -  Cadena de numeros
+ * @param {std::vector<int>} solucion2  -  Cadena de numeros
+ * @return {std::vector<int>}
+*/
 std::vector<int> 
 Mergesort::combinar (std::vector<int> solucion1, std::vector<int> solucion2) const {
 	std::vector<int> combinacion;
@@ -83,6 +104,10 @@ Mergesort::combinar (std::vector<int> solucion1, std::vector<int> solucion2) con
 
 
 
+/**
+ * Da el numero de subproblemas creados del algoritmo Mergesort
+ * @return {std::string}
+*/
 std::string 
 Mergesort::numeroSubProblemas () const {
 	return "2";
@@ -90,6 +115,10 @@ Mergesort::numeroSubProblemas () const {
 
 
 
+/**
+ * Da el factor de reduccion de un subproblema del algoritmo Mergesort
+ * @return {std::string}
+*/
 std::string  
 Mergesort::factorDeReduccion () const {
 	return "n/2";
@@ -97,6 +126,10 @@ Mergesort::factorDeReduccion () const {
 
 
 
+/**
+ * Da el el tiempo de combinacion del algoritmo Mergesort
+ * @return {std::string}
+*/
 std::string 
 Mergesort::tiempoDeCombinacion () const {
 	return "n";

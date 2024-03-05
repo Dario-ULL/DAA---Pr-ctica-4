@@ -41,7 +41,8 @@ int main () {
 
   algoritmo = new Mergesort;
   std::vector<int> cadena = generarVectorAleatorio();
-  std::vector<int> resultado = algoritmo->resolver(cadena);
+  int numeroDeLamadasMergesort = 0;
+  std::vector<int> resultado = algoritmo->resolver(cadena, numeroDeLamadasMergesort);
   std::cout << "Algortimo con Mergesort" << std::endl;
 	std::cout << algoritmo->recurrecia() << std::endl << "Cadena inicial: {";
   for (int i = 0; i < cadena.size() - 1; i++) {
@@ -53,10 +54,13 @@ int main () {
     std::cout << resultado[i] << ", ";
 	}
 	std::cout << resultado[resultado.size() - 1] << "}" << std::endl;
+  std::cout << "El nivel maximo del arbol del algoritmo es: " << algoritmo->nivelMaximoArbol(cadena, 1) << std::endl;
+  std::cout << "Numero de llamadas al algoritmo: " << numeroDeLamadasMergesort << std::endl << std::endl;
 
   algoritmo = new Quicksort;
   cadena = generarVectorAleatorio();
-  resultado = algoritmo->resolver(cadena);
+  int numeroDeLamadasQuicksort = 0;
+  resultado = algoritmo->resolver(cadena, numeroDeLamadasQuicksort);
   std::cout << "Algortimo con Quicksort" << std::endl;
 	std::cout << algoritmo->recurrecia() << std::endl << "Cadena inicial: {";
   for (int i = 0; i < cadena.size() - 1; i++) {
@@ -68,6 +72,8 @@ int main () {
     std::cout << resultado[i] << ", ";
 	}
 	std::cout << resultado[resultado.size() - 1] << "}" << std::endl;
+  std::cout << "El nivel maximo del arbol del algoritmo es: " << algoritmo->nivelMaximoArbol(cadena, 1) << std::endl;
+  std::cout << "Numero de llamadas al algoritmo: " << numeroDeLamadasQuicksort << std::endl;
 
   return 0;
 }
